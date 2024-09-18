@@ -101,8 +101,10 @@ main {
 }
 
 section {
-    padding: 60px 0;
+    padding: 10px 0;
 }
+
+
 
 h2 {
     text-align: center;
@@ -113,10 +115,32 @@ h2 {
 
 .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
+#about .content-item {
+    background-color: rgba(225, 190, 231, 0.6);
+    margin: 15px 0;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100vw;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+#contact .content-item {
+    background-color: rgba(225, 190, 231, 0.6);
+    margin: 15px 0;
+    padding: 30px;
+    border-radius: 8px;
+    width: calc(50% - 15px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(5px);
+}
 .content-item {
     background-color: rgba(225, 190, 231, 0.6);
     margin: 15px 0;

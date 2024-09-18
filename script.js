@@ -1,9 +1,10 @@
 let shapes = [];
+let minDistance = 50; 
 
 function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('p5-container');
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 100; i++) {
         shapes.push(new Shape());
     }
 }
@@ -38,15 +39,38 @@ class Shape {
     update() {
         let mouse = createVector(mouseX, mouseY);
         let dir = p5.Vector.sub(mouse, this.pos);
-        dir.setMag(0.1);
+        let distance = dir.mag();
+
+        if (distance < minDistance) {
+            dir.setMag(0.5); 
+        } else {
+            dir.setMag(0);
+        }
         this.acc = dir;
 
         this.vel.add(this.acc);
         this.vel.limit(2);
         this.pos.add(this.vel);
 
+        this.checkCollisions();
+
         if (this.pos.x < 0 || this.pos.x > width) this.vel.x *= -1;
         if (this.pos.y < 0 || this.pos.y > height) this.vel.y *= -1;
+    }
+
+    checkCollisions() {
+        for (let other of shapes) {
+            if (other !== this) {
+                let distBetween = p5.Vector.dist(this.pos, other.pos);
+                let combinedSize = (this.size + other.size) / 2;
+
+                if (distBetween < combinedSize) {
+                    let pushAway = p5.Vector.sub(this.pos, other.pos);
+                    pushAway.setMag(0.5); 
+                    this.vel.add(pushAway);
+                }
+            }
+        }
     }
 
     display() {
@@ -75,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nav.classList.toggle('active');
     });
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -85,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add animation on scroll
     const observerOptions = {
         root: null,
         rootMargin: '0px',
