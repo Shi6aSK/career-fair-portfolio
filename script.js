@@ -68,48 +68,12 @@ class Shape {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const pdfLinks = document.querySelectorAll('.btn[data-pdf]');
-    const modal = document.getElementById('pdf-viewer');
-    const modalClose = modal.querySelector('.close');
-    const pdfContainer = document.getElementById('pdf-container');
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
-
-    pdfLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const pdfUrl = link.getAttribute('data-pdf');
-            openPdfViewer(pdfUrl);
-        });
-    });
-
-    modalClose.addEventListener('click', closePdfViewer);
-
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closePdfViewer();
-        }
-    });
 
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
     });
-
-    function openPdfViewer(pdfUrl) {
-        modal.style.display = 'block';
-        PDFObject.embed(pdfUrl, pdfContainer, {
-            height: '100%',
-            pdfOpenParams: {
-                view: 'FitV',
-                page: '1'
-            }
-        });
-    }
-
-    function closePdfViewer() {
-        modal.style.display = 'none';
-        pdfContainer.innerHTML = '';
-    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
