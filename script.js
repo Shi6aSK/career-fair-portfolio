@@ -1,10 +1,10 @@
 let shapes = [];
-let minDistance = 50; 
+let minDistance = 100; 
 
 function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('p5-container');
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
         shapes.push(new Shape());
     }
 }
