@@ -1,18 +1,18 @@
-let particles = [];
+let shapes = [];
 
 function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('p5-container');
-    for (let i = 0; i < 100; i++) {
-        particles.push(new Particle());
+    for (let i = 0; i < 50; i++) {
+        shapes.push(new Shape());
     }
 }
 
 function draw() {
     clear();
-    for (let particle of particles) {
-        particle.update();
-        particle.display();
+    for (let shape of shapes) {
+        shape.update();
+        shape.display();
     }
 }
 
@@ -20,16 +20,31 @@ function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
 
-class Particle {
+class Shape {
     constructor() {
         this.pos = createVector(random(width), random(height));
-        this.vel = createVector(random(-1, 1), random(-1, 1));
-        this.size = random(3, 8);
-        this.color = color(random(200, 255), random(200, 255), random(200, 255), 150);
+        this.vel = p5.Vector.random2D().mult(random(0.2, 0.8));
+        this.acc = createVector(0, 0);
+        this.size = random(10, 30);
+        this.shapeType = random(['circle', 'triangle', 'square']);
+        this.color = color(
+            random(200, 255),
+            random(200, 255),
+            random(200, 255),
+            random(100, 200)
+        );
     }
 
     update() {
+        let mouse = createVector(mouseX, mouseY);
+        let dir = p5.Vector.sub(mouse, this.pos);
+        dir.setMag(0.1);
+        this.acc = dir;
+
+        this.vel.add(this.acc);
+        this.vel.limit(2);
         this.pos.add(this.vel);
+
         if (this.pos.x < 0 || this.pos.x > width) this.vel.x *= -1;
         if (this.pos.y < 0 || this.pos.y > height) this.vel.y *= -1;
     }
@@ -37,7 +52,18 @@ class Particle {
     display() {
         noStroke();
         fill(this.color);
-        ellipse(this.pos.x, this.pos.y, this.size);
+        push();
+        translate(this.pos.x, this.pos.y);
+        rotate(frameCount * 0.02);
+        if (this.shapeType === 'circle') {
+            ellipse(0, 0, this.size);
+        } else if (this.shapeType === 'triangle') {
+            triangle(0, -this.size / 2, -this.size / 2, this.size / 2, this.size / 2, this.size / 2);
+        } else if (this.shapeType === 'square') {
+            rectMode(CENTER);
+            rect(0, 0, this.size, this.size);
+        }
+        pop();
     }
 }
 
@@ -112,18 +138,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.content-item').forEach(item => {
         observer.observe(item);
-    });
-
-    // Particle interaction with mouse
-    document.addEventListener('mousemove', (e) => {
-        let mouseX = e.clientX;
-        let mouseY = e.clientY;
-        particles.forEach(particle => {
-            let d = dist(mouseX, mouseY, particle.pos.x, particle.pos.y);
-            if (d < 100) {
-                particle.vel = p5.Vector.sub(particle.pos, createVector(mouseX, mouseY));
-                particle.vel.setMag(random(2, 5));
-            }
-        });
     });
 });
