@@ -15,8 +15,11 @@ const shapePalette = [
 ];
 
 const labelSymbols = [
-    'C++', 'Python', 'Java', 'Rust', 'Go', 'Σ', '∫', 'Δ', 'λ', 'π', 'Ω',
-    'F=ma', 'E=mc²', 'ħ', '∂/∂t', 'AI', 'ML', '∇', '∑', '{}', '∞'
+    'C++', 'Python', 'Java', 'Rust', 'Go', 'Kotlin', 'Swift', 'TypeScript', 'Σ', '∫', 'Δ',
+    'λ', 'π', 'Ω', 'F=ma', 'E=mc²', 'ħ', '∂/∂t', 'AI', 'ML', 'LLM', 'DL', 'EdgeAI',
+    'IoT', '5G', 'Web3', 'Blockchain', 'ZeroTrust', 'Quantum', 'QKD', 'AR', 'VR',
+    'XR', 'DevOps', 'MLOps', 'SRE', 'CI/CD', 'Serverless', 'Cloud', 'Kubernetes',
+    'Docker', 'Microservices', 'Observability', 'DataOps', '∇', '∑', '{}', '∞'
 ];
 
 let shapes = [];
@@ -91,7 +94,7 @@ function renderLabels() {
 class Shape {
     constructor() {
         this.pos = createVector(random(width), random(height));
-        this.baseSpeed = random(0.65, 1.35);
+        this.baseSpeed = random(0.45, 1);
         this.vel = p5.Vector.random2D().setMag(this.baseSpeed);
         this.acc = createVector(0, 0);
         this.size = random(14, 32);
@@ -104,13 +107,13 @@ class Shape {
             const dir = p5.Vector.sub(cursorVec, this.pos);
             const distSq = dir.magSq();
             if (distSq < CURSOR_RADIUS * CURSOR_RADIUS) {
-                dir.normalize().mult(2.35);
+                dir.normalize().mult(2);
                 this.acc = dir;
             } else {
-                this.acc.mult(0.78);
+                this.acc.mult(0.5);
             }
         } else {
-            this.acc.mult(0.78);
+            this.acc.mult(0.5);
         }
 
         this.vel.add(this.acc);
@@ -150,7 +153,7 @@ class Shape {
 class FloatingLabel {
     constructor() {
         this.pos = createVector(random(width), random(height));
-        this.baseSpeed = random(0.55, 1.05);
+        this.baseSpeed = random(0.45, 0.95);
         this.vel = p5.Vector.random2D().setMag(this.baseSpeed);
         this.symbol = random(labelSymbols);
         this.size = random(26, 46);
@@ -163,7 +166,7 @@ class FloatingLabel {
             const dir = createVector(mouseX - this.pos.x, mouseY - this.pos.y);
             const distSq = dir.magSq();
             if (distSq < (CURSOR_RADIUS * 0.85) * (CURSOR_RADIUS * 0.85)) {
-                dir.normalize().mult(1.2);
+                dir.normalize().mult(1.1);
                 this.vel.add(dir);
             }
         }
