@@ -16,9 +16,16 @@
             <h1>Portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#career-objective">Career Objective</a></li>
+                    <li><a href="#senior-design">Senior Design</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#general-education">Gen Ed Reflection</a></li>
+                    <li><a href="#cumulative-reflection">Cumulative Reflection</a></li>
+                    <li><a href="#ethics-paper">Ethics Paper</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" aria-label="Toggle menu">
@@ -30,17 +37,76 @@
     </header>
 
     <main>
-        <section id="about">
+        <section id="home">
             <div class="container">
-                <h2>Who Am I?</h2>
+                <div class="hero">
+                    <div class="hero-layout">
+                        <div class="hero-copy">
+                            <h2>Shobhit Singh</h2>
+                            <p class="tagline">Welcome to my engineering portfolio.</p>
+                            <p class="intro">I am a Senior in Computer Engineering exploring embedded systems, quantum computing, and cybersecurity. I play with the breadboard, mentor peers, and chase systems that balance performance with ethics.</p>
+                            <div class="contact-grid">
+                                <div>
+                                    <span class="label">Email</span>
+                                    <a href="mailto:shiba@iastate.edu">shiba@iastate.edu</a>
+                                </div>
+                                <div>
+                                    <span class="label">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/shobhsk" target="_blank" rel="noopener">/in/shobhsk</a>
+                                </div>
+                                <div>
+                                    <span class="label">GitHub</span>
+                                    <a href="https://github.com/Shi6aSK" target="_blank" rel="noopener">@Shi6aSK</a>
+                                </div>
+                                <div>
+                                    <span class="label">Location</span>
+                                    <span>Ames, Iowa</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-avatar">
+                            <img src="image.png" alt="Shobhit Singh headshot" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="career-objective">
+            <div class="container">
+                <h2>Career Objective</h2>
+                <div class="text-block">
+                    <p>I see myself designing edge-to-cloud hardware that can host quantum-inspired workloads without compromising on privacy or sustainability. I want to push for systems that are technically elegant and ethically grounded, blending research sprints with opportunities to mentor, teach, and co-create with teams across disciplines. Long term, I hope to earn a graduate degree in computer engineering, contribute to quantum hardware roadmaps, and ship technology that earns trust because it considers people first.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="senior-design">
+            <div class="container">
+                <h2>Senior Design Project</h2>
                 <div class="content">
                     <div class="content-item">
-                        <h3>I'm Shobhit Singh, a Computer geek, majoring in CE and minoring in CS!</h3>
-                        <p>Right now working with embedded systems, quantum computing, and encryption technologies.<br>
-                        This Fall, I transferred from India to Iowa State University, having completed 2 years of bachlor's in India.<br>
-                        I was the General Secretary of ACM Student Chapter and Chairperson of Quantum Computing Club back in India,<br>
-                        at ISU I am currently a member of Japanese Club, CyberSec Club, Animal Rescue and Welfare Club among others.<br> I won the Qiskit Fall Fest '24 Hackathon at ISU with my Chaos Theory Project.</p>
+                        <h3>SnowSafe Rover &mdash; Autonomous Salt Spreading Robot</h3>
+                        <p class="meta">CPRE 491&ndash;492 | Team of 6 | In Progress</p>
+                        <div class="text-block">
+                            <h4>Description of the Project</h4>
+                            <p>We are building an automated salt-spreading robot that keeps sidewalks walkable during winter storms. The rover patrols pre-defined routes, maps surface conditions, and dispenses salt only where ice accumulation is detected. The system reduces labor for facilities staff while limiting excess salt that can damage infrastructure or local ecosystems.</p>
+                            <h4>My Role</h4>
+                            <p>I lead the vision subsystem on an ESP32-S3 module. I own the wide-angle camera interface, real-time image capture, and the CV pipeline that detects obstacles on the pavement. I also synchronize detections with the navigation microcontroller so that we can navigate around or stop.</p>
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>ESP-IDF camera drivers, DMA buffering, and on-device inference optimizations</li>
+                                <li>Classical computer vision heuristics for frost detection under low-light conditions</li>
+                                <li>Cross-controller messaging between vision, drive, and actuation subsystems</li>
+                            </ul>
+                            <h4>Big Picture Contribution</h4>
+                            <p>The vision module allows SnowSafe to spread salt only when and where it is needed, cutting salt usage and improving battery life. That precision also lets us scale the rover to campus-sized deployments without requiring a human spotter.</p>
+                            <h4>Supporting Documents / Links</h4>
+                            <ul>
+                                <li><a href="#" aria-disabled="true">Design requirements and architecture (publishing soon)</a></li>
+                                <li><a href="#" aria-disabled="true">Field test footage and CV notebook (in progress)</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,50 +117,294 @@
                 <h2>Projects</h2>
                 <div class="content">
                     <div class="content-item">
-                        <h3>Chaos Theory for Image Encryption (Summer '24)</h3>
-                        <p>A research project coming up with a Novel Chaos Function, wanted to apply Quantum Encoding to it. But could not find a way to do that right now. </p>
-                        <a class="btn" href="https://colab.research.google.com/drive/1dMZigYCZIaoWJKoP1gHW2Wu6iTrrG2lN?usp=sharing#scrollTo=-ZkmeHu2PlaB" target="_blank">Collab Notebook</a>
+                        <h3>PerchGuard &mdash; Motion-Triggered Bird Feeder Monitor <span class="meta">Fall 2025</span></h3>
+                        <p class="description">Edge AI bird-feeder monitor built on a Seeed XIAO ESP32-S3 that captures 10-second audio and video clips whenever motion is detected, then encrypts and streams highlights to my phone for review.</p>
+                        <p><strong>My Role:</strong> Wrote the embedded firmware, designed the power budget, and tuned the motion-detection pipeline with ROI masking so the device stays responsive while running off-grid.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Low-power embedded design with deep sleep and wake-on-motion</li>
+                                <li>ESP-IDF camera, audio, and secure messaging integrations</li>
+                                <li>Edge ML heuristics for event detection</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>Seeed Studio XIAO ESP32-S3 docs</li>
+                                <li>Espressif AI camera examples</li>
+                                <li><a href="#" aria-disabled="true">Demo repository (publishing soon)</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="content-item">
-                        <h3>Multifunctional Audio tool using Streamlit (Spring '24)</h3>
-                        <p>Learned Signal Processing and ML concepts through this project. Noise Cancellation, Audio Transcription and Audio Generation features deployed using streamlit. </p>
-                        <a class="btn" href="https://signalsolve.streamlit.app/" target="_blank">Visit Website</a>
+                        <h3>CANary &mdash; Automotive CAN-Bus Telemetry &amp; Edge Alerts <span class="meta">Fall 2025</span></h3>
+                        <p class="description">Portable automotive diagnostics probe that listens on OBD-II/CAN, decodes key PIDs, and publishes health snapshots via BLE/Wi-Fi alongside acoustic and visual context captured during fault events.</p>
+                        <p><strong>My Role:</strong> Implemented the CAN stack, wrote a BLE telemetry service, and fused microphone/camera data to flag anomalies for drivers and technicians.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Automotive CAN and OBD-II protocol parsing</li>
+                                <li>Embedded concurrency with FreeRTOS tasks</li>
+                                <li>Bluetooth Low Energy data streaming</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>ISO-11898 and SAE J1979 specifications</li>
+                                <li>Espressif BLE examples</li>
+                                <li><a href="#" aria-disabled="true">System schematics (uploading soon)</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="content-item">
-                        <h3>Biomemetic Self Healing-Robots, Article (Spring '24)</h3>
-                        <p>A research article related to Bio-Robots, did it as a project for a course titled, 'Biological Machines'. Worked a little with AlphaFold and other Scientific computing platforms. </p>
-                        <a class="btn" href="https://iastate.box.com/s/sshvrguky2a5mact0e6igbdg1g95rd8e" target="_blank">View pdf</a>
+                        <h3>Autonomous Wi-Fi Optimization &amp; Router Placement Robot <span class="meta">Summer 2024</span></h3>
+                        <p class="description">Hybrid Arduino Uno &amp; Tiva C platform that maps Wi-Fi signal strength across rooms, drives to optimal positions, and renders heatmaps in a Python GUI to guide router placement decisions.</p>
+                        <p><strong>My Role:</strong> Led subsystem integration, built the real-time GUI, and synchronized robot telemetry so operators could steer solely from the interface during demos.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Multi-microcontroller coordination and serial protocols</li>
+                                <li>Real-time visualization with Python and Matplotlib</li>
+                                <li>Human-in-the-loop system design</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>Arduino Wi-Fi scanning libraries</li>
+                                <li>Texas Instruments Tiva C development guides</li>
+                                <li><a href="#" aria-disabled="true">Demo video (coming soon)</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="content-item">
-                        <h3>Review on recent advances in Trusted Execution Environments based Security Measures for Safeguarding Hyperledger Fabric, Review Paper (Spring '24)</h3>
-                        <p>Dived into Web3 and Blockchain with this proeject, learning the basics and reading recent research advances in TEEs. </p>
-                        <a class="btn" href="https://iastate.box.com/s/respsmffr256si1b1o5on58uaa9jzw05" target="_blank">View pdf</a>
+                        <h3>Multifunctional Audio Tool using Streamlit <span class="meta">Spring 2024</span></h3>
+                        <p class="description">Browser-based audio workstation that lets users denoise clips, auto-transcribe speech, and generate synthetic audio with a streamlined Streamlit front end.</p>
+                        <p><strong>My Role:</strong> Owned the data pipeline, optimized inference for lightweight deployment, and iterated on the UX with classroom feedback.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Signal processing and spectrogram analysis</li>
+                                <li>Rapid ML prototyping with Python</li>
+                                <li>Web UI deployment using Streamlit</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>Streamlit documentation</li>
+                                <li>Open-source speech-to-text models</li>
+                                <li><a href="https://signalsolve.streamlit.app/" target="_blank" rel="noopener">Live Streamlit app</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="content-item">
-                        <h3>Comparative Analysis of Pre-Quantum and Post-Quantum Encryption Algorithms, Paper *data incomplete, (Fall '23)</h3>
-                        <p>Came up with this idea while learning about quantum computing, did it as a project for the course, 'Data Structures and Algorithms in C++'. </p>
-                        <a class="btn" href="https://iastate.box.com/s/uyhajv4dcifajnzof9qx3vf6m84ccfcf" target="_blank">View pdf</a>
+                        <h3>Chaos Theory for Image Encryption <span class="meta">Fall 2023 &ndash; Summer 2024</span></h3>
+                        <p class="description">Research prototype exploring novel chaos functions for pixel permutation, diffusion, and key generation in classical image encryption pipelines, with a roadmap toward quantum-era resilience.</p>
+                        <p><strong>My Role:</strong> Authored the chaos model, ran statistical randomness tests, and presented findings at Qiskit Fall Fest '24.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Applied chaos theory in cryptography</li>
+                                <li>Scientific computing with Python (NumPy, Matplotlib)</li>
+                                <li>Research communication to technical audiences</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>Chaos cryptography survey papers</li>
+                                <li>IBM Qiskit tutorials</li>
+                                <li><a href="https://colab.research.google.com/drive/1dMZigYCZIaoWJKoP1gHW2Wu6iTrrG2lN?usp=sharing#scrollTo=-ZkmeHu2PlaB" target="_blank" rel="noopener">Research notebook</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="content-item">
-                        <h3>Old Projects</h3>
-                        <p>-Traffic Sign Detection using OpenCV.<br>-VPN using Java.<br>-Java and Python Apps.<br>-JavaScript Creative Coding Leisure Projects, like Fractal and Maths Visualisation.</p>
+                        <h3>Trusted Execution Environments for Hyperledger Fabric <span class="meta">Spring 2024</span></h3>
+                        <p class="description">Surveyed state-of-the-art TEE integrations for safeguarding Hyperledger Fabric deployments, highlighting threat models and architectural trade-offs in emerging Web3 stacks.</p>
+                        <p><strong>My Role:</strong> Synthesized research papers, created comparison matrices, and presented recommendations to blockchain-focused cohorts.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Security architecture analysis</li>
+                                <li>Technical writing for distributed systems</li>
+                                <li>Web3 ecosystem landscape mapping</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>Intel SGX developer tutorials</li>
+                                <li>Hyperledger Fabric whitepapers</li>
+                                <li><a href="https://iastate.box.com/s/respsmffr256si1b1o5on58uaa9jzw05" target="_blank" rel="noopener">Published review</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <h3>Comparative Analysis of Pre- and Post-Quantum Encryption Algorithms <span class="meta">Fall 2023</span></h3>
+                        <p class="description">Course project that benchmarks classical cryptosystems against post-quantum candidates, focusing on performance, implementation complexity, and migration strategies.</p>
+                        <p><strong>My Role:</strong> Evaluated algorithmic trade-offs, built reproducible experiments, and documented guidance for developers planning quantum-safe upgrades.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Cryptographic benchmarking workflows</li>
+                                <li>Technical documentation and visualization</li>
+                                <li>Research-driven decision frameworks</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>NIST PQC candidate documentation</li>
+                                <li>Open-source crypto libraries</li>
+                                <li><a href="https://iastate.box.com/s/uyhajv4dcifajnzof9qx3vf6m84ccfcf" target="_blank" rel="noopener">Paper draft</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="research">
             <div class="container">
-                <h2>Contact</h2>
+                <h2>Research Highlights</h2>
                 <div class="content">
                     <div class="content-item">
-                        <h3>Let's Connect</h3>
-                        <p>Email: <a href="mailto:shiba@iastate.edu" target="_blank">shiba</a></p>
-                        <p>LinkedIn: <a href="https://www.linkedin.com/in/shobhsk" target="_blank">Shobhit Singh (shobh.sk)</a></p>
-                        <p>X: <a href="https://x.com/shi6a_sk" target="_blank">shi6a_sk</a></p>
-                        <p>Instagram: <a href="https://www.instagram.com/shi6a.sk" target="_blank">shi6a.sk</a></p>
-                        
+                        <h3>Quantum Networking Protocols <span class="meta">Undergraduate Researcher &mdash; Fall 2025 &ndash; Present</span></h3>
+                        <p class="description">Investigating link-layer and transport abstractions for near-term quantum networks at Iowa State University, focusing on reliable entanglement distribution over noisy channels.</p>
+                        <p><strong>My Role:</strong> Model protocol state machines, simulate latency/reliability trade-offs, and draft research manuscripts with faculty mentors.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Quantum networking theory</li>
+                                <li>Python-based simulation tooling</li>
+                                <li>Collaborative academic writing</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>Qiskit quantum networking modules</li>
+                                <li>Recent IEEE/ACM quantum internet papers</li>
+                                <li><a href="#" aria-disabled="true">Preprint link (in preparation)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <h3>Biomimetic Self-Healing Robots Article <span class="meta">Spring 2024</span></h3>
+                        <p class="description">Explored biological machines as inspiration for autonomous self-repairing robots, synthesizing cross-disciplinary literature from materials science, robotics, and biology.</p>
+                        <p><strong>My Role:</strong> Coordinated peer reviews, performed comparative analysis, and communicated findings for both academic and public audiences.</p>
+                        <div class="detail-group">
+                            <h4>Skills and Knowledge Gained</h4>
+                            <ul>
+                                <li>Interdisciplinary research synthesis</li>
+                                <li>Technical writing and presentation</li>
+                                <li>Scientific storytelling</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Resources Used</h4>
+                            <ul>
+                                <li>EBTY 183L course resources</li>
+                                <li>AlphaFold protein modeling studies</li>
+                                <li><a href="https://iastate.box.com/s/sshvrguky2a5mact0e6igbdg1g95rd8e" target="_blank" rel="noopener">Published article</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="experience">
+            <div class="container">
+                <h2>Internship &amp; Technical Experience</h2>
+                <div class="content">
+                    <div class="content-item">
+                        <h3>Horse's Mouth &mdash; Operations and Technical Content Intern</h3>
+                        <p class="description">Horse's Mouth builds resources for registered investment advisors. I partnered with the founding team to bridge editorial strategy, mentor outreach, and data-driven content decisions.</p>
+                        <div class="detail-group">
+                            <h4>Duties and Projects</h4>
+                            <ul>
+                                <li>Coordinated directly with the CEO on mentor acquisition funnels</li>
+                                <li>Shipped AI-assisted SEO content workflows and analytics dashboards</li>
+                                <li>Redesigned onboarding documentation for distributed contributors</li>
+                            </ul>
+                        </div>
+                        <div class="detail-group">
+                            <h4>Skills Learned &mdash; Technical and Soft</h4>
+                            <ul>
+                                <li>Content automation with Python and no-code tools</li>
+                                <li>Stakeholder communication and expectation management</li>
+                                <li>Leadership in ambiguous, fast-paced environments</li>
+                            </ul>
+                        </div>
+                        <p class="meta">Evaluations / Presentations: <a href="#" aria-disabled="true">Upload in progress</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <div class="container">
+                <h2>Resume</h2>
+                <div class="text-block">
+                    <p>Browse or download my latest resume to explore academic highlights, research experience, leadership roles, and community impact. I update this document ahead of each recruiting cycle.</p>
+                    <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+                    <ul class="resume-highlights">
+                        <li>Research &amp; Publications: Quantum encryption, trusted execution, biomimetic robotics</li>
+                        <li>Awards: Qiskit Fall Fest '24 Hackathon winner, ACM Chapter leadership honors</li>
+                        <li>Activities: Quantum Computing Club chair (India), ISU CyberSec and Japanese clubs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="general-education">
+            <div class="container">
+                <h2>General Education Reflection</h2>
+                <div class="text-block">
+                    <h3>How General Education Shaped My Engineering Mindset</h3>
+                    <p>Throughout my undergraduate journey, my general education courses played a much larger role in shaping my engineering mindset than I initially expected. While my technical courses taught me how systems function, the general education curriculum taught me how systems behave&mdash;socially, culturally, biologically, and environmentally. Together, these perspectives have helped me understand engineering not just as a technical discipline, but as a human-centered practice affected by global and societal contexts.</p>
+                    <p>One of the most influential courses I took was ANTHR 3090: Introduction to Culture and Language, which opened my eyes to how deeply communication is tied to cultural norms and power structures. Studying linguistic patterns, cultural identity, and cross-cultural communication helped me recognize why engineering solutions often fail when designers assume a one-size-fits-all approach. For example, when building global technologies&mdash;whether AI systems, embedded devices, or social media platforms&mdash;the diversity of user language, values, and lived experiences must be considered to avoid exclusion, misuse, or unintended harm. This course strengthened my ability to collaborate in diverse teams and improved my awareness of the cultural assumptions I bring into engineering problem-solving.</p>
+                    <p>In World Regions in Global Context, I learned how geography, politics, economics, and history intertwine to shape regional development. This course made contemporary global issues&mdash;such as resource scarcity, conflict, migration patterns, and economic inequality&mdash;feel less abstract and more structurally understandable. As an engineer interested in quantum computing and edge technologies, this perspective is essential. The course reminded me that technological progress cannot be separated from global realities: supply-chain fragility, the digital divide, and unequal access to computing infrastructure are real constraints that shape what engineering solutions are feasible or ethical. Understanding how different regions operate prepares me to design technology that respects global diversity rather than reinforcing existing inequalities.</p>
+                    <p>Another impactful class was EBTY 183L: Biological Machines, where we studied cellular systems as if they were engineered machines&mdash;with feedback loops, communication channels, energy systems, and failure modes. This perspective helped me appreciate biological resilience and efficiency, which in turn informs how I think about engineering systems. Concepts like distributed processing, redundancy, and adaptive response mirror ideas in cyber-physical systems and embedded networks. Studying biological systems strengthened my intuition for designing robust engineering solutions that can withstand uncertainty, noise, and environmental variation&mdash;core challenges in fields like edge computing, autonomous devices, and hardware security.</p>
+                    <p>Finally, CSET 108: Environment and Sustainability reinforced the environmental responsibilities that accompany any engineering decision. I learned how seemingly small design choices can cumulatively impact ecosystems, energy consumption, and global sustainability goals. Today&rsquo;s major engineering problems&mdash;climate change, e-waste, resource depletion, and unsustainable manufacturing&mdash;require solutions grounded in environmental literacy, not just technical capability. This course made it clear that future engineers must consider carbon footprints, material sourcing, and long-term ecological consequences when designing new technologies or computational infrastructures.</p>
+                    <p>Together, these courses have prepared me to approach engineering problems from a broader and more responsible perspective. Issues such as misinformation, global conflict amplified by technology, environmental degradation, and unequal access to digital infrastructure are all contemporary challenges that demand interdisciplinary thinking. The cultural awareness from ANTHR 3090, the geopolitical understanding from World Regions, the systems thinking from Biological Machines, and the environmental consciousness from Environment and Sustainability collectively shape how I approach future engineering challenges. Whether I am designing embedded systems, contributing to future quantum computing hardware, or working on secure networked technologies, these courses ensure that I consider not just how to build something, but whom it affects, how it will be used, and what long-term impact it may have on society and the planet.</p>
+                    <p>In conclusion, my general education experiences were not separate from my engineering development&mdash;they were foundational to it. They expanded my worldview, strengthened my communication abilities, and taught me to integrate cultural, environmental, and global perspectives into my technical work. These lessons will continue to guide me as I pursue graduate study and future research, helping me become not just a better engineer, but a more thoughtful and responsible one.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cumulative-reflection">
+            <div class="container">
+                <h2>Cumulative Reflection</h2>
+                <div class="text-block">
+                    <h3>My Engineering Journey So Far</h3>
+                    <p>At Bennett, I leaned into that curiosity through student organizations. As General Secretary of the ACM student chapter and Chairperson of the Quantum Computing Club, I ended up doing a lot more than just attending events. I helped organize talks, mentored peers, and ran nerdy deep-dive sessions on topics like post-quantum cryptography and trusted execution environments. That turned into actual research projects: a comparative analysis of pre- and post-quantum encryption algorithms and a review of advances in TEEs for blockchain security. Those experiences made me realize how much I enjoy both research and explaining technical ideas in a way that other people can actually use.</p>
+                    <p>Transferring to Iowa State University for my junior year was a turning point. I was the first student to do that partnership program from Bennett, which meant stepping into a new continent, a different academic system, and a place where I suddenly had to choose my own courses instead of following a fixed curriculum. My first semester at ISU was rough, I was completely used to the Indian system, where expectations and paths are more rigid. Instead of treating that as a vague “culture shock,” I ended up approaching it the way an engineer approaches a problem: I met with advisors, watched how my classmates managed their workloads, and iterated on my study habits until I found a rhythm that worked. That experience pushed me to take responsibility for my own learning in a much more deliberate way.</p>
+                    <p>One of the biggest shifts at ISU was my growing interest in embedded systems. I bought an ESP32-S3 mostly out of curiosity and started teaching myself how to actually make it do something meaningful. That self-learning spilled into projects like an automotive CAN-bus telemetry system (“CANary”) and a motion-triggered bird feeder monitor (“PerchGuard”), where I had to combine low-level communication protocols, edge processing, and practical constraints like power usage and responsiveness. None of that was “required” in class; I learned machine learning basics, embedded C, and networking details because I wanted my ideas to work in the real world, not just on paper. Similarly, my earlier work on encryption and security came from realizing that non-technical people are extremely vulnerable online simply because they don’t understand what’s happening behind the scenes, so I tried to fill that gap with projects and explanations aimed at everyday users.</p>
+                    <p>One of my favorite examples of designing and integrating a system was our Wi-Fi optimization and router placement robot. I was responsible for the entire user interface and the overall integration of the subsystems. The GUI had to do more than just “look nice”, it needed to stay perfectly in sync with the robot’s movement, show its real-time location, and generate a heatmap of Wi-Fi signal strengths as it scanned. For the demo, the driver wasn’t allowed to look at the robot directly, so the GUI effectively was their eyes. That meant any mismatch between what the robot was doing and what my interface showed would immediately break the illusion and the usefulness. I spent nights tuning the data pipeline between the robot and the UI, dealing with limited location information, smoothing out timing issues, and making sure that the user could intuitively understand what was happening. That project taught me a lot about system-level thinking: it’s not enough for each individual component to work; the entire experience has to make sense to the person using it.</p>
+                    <p>Alongside the technical work, communication has been a constant theme in how I operate in teams. Whether it was coordinating tasks, mediating small conflicts, or helping teammates articulate their ideas during presentations, I naturally drifted toward roles that involved organizing and translating. I’ve seen how a lack of clear communication can sink a project, so I put real effort into making expectations explicit and making sure everyone knew what they were doing and why. That made meeting deadlines much less chaotic. On the written side, I’ve always liked creating technical content for non-technical audiences, from my “Quantum Computing for Everyone” and “Personal Cybersecurity” web essays to documentation I wrote back in ACM and the quantum club. Even in my operations and technical content internship at Horse’s Mouth, a lot of my impact came from writing and structuring content that actually reached and engaged people, not just existing as jargon on a page.</p>
+                    <p>My ethics course at ISU pushed me to zoom out and think about the larger consequences of my future work as an engineer. For my final case study, I wrote “Algorithmic Ethics and Human Rights: An Examination of Meta’s Role in Global Conflicts,” where I analyzed how Facebook/Meta’s algorithms influenced real-world harm in Myanmar, Ethiopia, and the Israel-Palestine conflict. I used frameworks like consequentialism, stakeholder ethics, and a human rights lens to examine how seemingly “neutral” algorithmic decisions led to amplified hate speech, misinformation, and, ultimately, violence and displacement. That project was personal in a way I didn’t expect; consuming constant negative news, especially about war and injustice, had already affected my own mental space. Writing the paper helped me understand that as engineers, we don’t get to hide behind “unintended consequences.” If we design systems that operate at global scale, we have a responsibility to monitor their impact and build guardrails to reduce harm. That assignment is one of the clearest examples where my coursework directly deepened my sense of ethical and professional responsibility, especially in a global and societal context.</p>
+                    <p>Being an international student has also expanded my understanding of what “global context” actually means in day-to-day engineering. Back home, people were more relaxed about coursework, and the intensity level felt very different. At ISU, I’ve seen classmates pour huge amounts of time and energy into projects, research, and internships. That contrast forced me to raise my own standards and broaden my perspective. It’s made me more aware of how different educational cultures shape expectations, how teams with mixed backgrounds think about problems differently, and how engineering decisions can’t be separated from the environments and societies they emerge from.</p>
+                    <p>Across both universities, a big part of my growth has come from stepping into leadership and community roles. As General Secretary of the ACM student chapter, Chairperson of the Quantum Computing Club, and later a student leader in other spaces, I discovered that I genuinely enjoy mentoring and teaching. It’s one thing to understand something yourself; it’s another to break it down so that someone younger or less experienced can build on it. That’s where I really saw the connection between communication (ABET 3) and lifelong learning (ABET 7): every time I teach something, I’m forced to refine my own understanding and stay up to date. These roles also made me more intentional about seeking out external resources, research papers, technical documentation, expert talks, and even human rights reports in the case of my Meta ethics work, rather than waiting for everything to be handed to me in a classroom.</p>
+                    <p>If I had to summarize what I’ve learned about myself through this whole journey, I’d say my main strengths are coordination, creative problem-solving under constraints, and a stubborn curiosity. I like being the person who pulls the pieces together when a project seems stuck, especially when resources are limited or the problem looks unsolvable at first glance. I also know now that I’m happiest when I’m learning something new and then turning that knowledge into something concrete, whether that’s a case study on algorithmic ethics, an encrypted system, or a quirky embedded device that quietly does its job at the edge.</p>
+                    <p>Looking forward, I plan to go to graduate school in computer engineering, likely focusing on edge computing in the near term and eventually moving toward quantum computing hardware. The big, maybe slightly dramatic, goal is to work on something that outlives me, whether that’s a new algorithm, a hardware design, or an application of quantum computing that genuinely benefits humanity. The more I’ve learned, the more obvious it’s become that engineering is not static. Technologies, threats, and societal needs are constantly evolving, and if I want to contribute meaningfully, I’ll have to keep evolving too. My undergraduate journey, from quantum clubs in India to embedded systems and ethics case studies in the U.S. has convinced me that I’m ready to take on that responsibility: to communicate clearly, to think ethically about the systems I build, and to keep learning long after the degree itself is over.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ethics-paper">
+            <div class="container">
+                <h2>Ethics Paper (CPRE/EE 394)</h2>
+                <div class="content">
+                    <div class="content-item">
+                        <h3>Algorithmic Ethics and Human Rights: An Examination of Meta's Role in Global Conflicts</h3>
+                        <p class="description">This paper analyzes how Meta's content moderation algorithms influence real-world safety in conflict zones. It discusses the tension between amplification, censorship, and human oversight through ethical lenses such as utilitarianism, rights-based frameworks, and professional responsibility.</p>
+                        <p class="description">I explore how engineers can design accountable systems, propose audit mechanisms, and outline policy collaborations that reduce harm without silencing vulnerable communities.</p>
+                        <a class="btn" href="ethicspaper.pdf" target="_blank" rel="noopener">Download Ethics Paper (PDF)</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +413,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy;  Shobhit Singh. 17 December 2024. A Work in Progress.</p>
+            <p>&copy;  Shobhit Singh. December 2nd, 2024. A Work in Progress.</p>
         </div>
     </footer>
 
