@@ -6,12 +6,12 @@ const LABEL_RADIUS_MULTIPLIER = 0.65;
 const LABEL_FONT = 'Turret Road';
 
 const shapePalette = [
-    [232, 93, 4, 160],
-    [244, 140, 6, 150],
-    [255, 120, 30, 140],
-    [200, 65, 0, 130],
-    [255, 170, 60, 120],
-    [160, 160, 160, 80]
+    [196, 181, 253, 155],  // lavender
+    [147, 197, 253, 145],  // sky
+    [253, 164, 175, 140],  // rose
+    [134, 239, 172, 130],  // mint
+    [253, 230, 138, 120],  // amber
+    [180, 160, 255, 110]   // soft violet
 ];
 
 const labelSymbols = [
