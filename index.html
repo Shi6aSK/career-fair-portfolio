@@ -89,7 +89,7 @@
 
         <section id="senior-design">
             <div class="container">
-                <h2>Senior Design Project</h2>
+                <h2>Senior Design</h2>
                 <div class="content">
                     <div class="content-item">
                         <h3>Salt.E &mdash; Autonomous Salt Spreading Robot</h3>
@@ -98,24 +98,17 @@
                             <img src="saltspreader_vision.png" alt="Salt.E obstacle detection vision pipeline showing edge detection overlay" class="project-img" />
                             <img src="saltspreader_demo.png" alt="Salt.E rover in the field with mobile app controller" class="project-img" />
                         </div>
-                        <div class="text-block">
-                            <h4>Description of the Project</h4>
-                            <p>Autonomous rover that patrols campus sidewalks, detects ice accumulation, and precisely dispenses salt &mdash; reducing labor, cutting waste, and protecting infrastructure.</p>
-                            <h4>My Role</h4>
-                            <p>Leading the ESP32-S3 vision subsystem &mdash; camera interface, real-time DMA capture, CV obstacle detection, and cross-controller sync driving navigation decisions.</p>
-                            <h4>Skills and Knowledge Gained</h4>
+                        <div class="card-links">
+                            <a href="https://sdmay26-07.sd.ece.iastate.edu/" class="project-link" target="_blank" rel="noopener">↗ Team Website</a>
+                        </div>
+                        <p class="description">Autonomous rover patrolling campus sidewalks &mdash; detects ice, dispenses salt precisely, cutting waste and labor without a human spotter.</p>
+                        <p><strong>My Role:</strong> Leading the ESP32-S3 vision subsystem &mdash; camera interface, DMA capture, CV obstacle detection, and cross-controller sync.</p>
+                        <div class="detail-group">
+                            <h4>Skills</h4>
                             <ul>
-                                <li>ESP-IDF camera drivers, DMA buffering, and on-device inference optimizations</li>
-                                <li>Classical computer vision heuristics for frost detection under low-light conditions</li>
-                                <li>Cross-controller messaging between vision, drive, and actuation subsystems</li>
-                            </ul>
-                            <h4>Big Picture Contribution</h4>
-                            <p>Precision spreading cuts salt use and extends battery life, making campus-scale deployment viable without a human spotter.</p>
-                            <h4>Supporting Documents / Links</h4>
-                            <ul>
-                                <li><a href="https://sdmay26-07.sd.ece.iastate.edu/" target="_blank" rel="noopener">Salt.E Team Website</a></li>
-                                <li><a href="#" aria-disabled="true">Design requirements and architecture (publishing soon)</a></li>
-                                <li><a href="#" aria-disabled="true">Field test footage and CV notebook (in progress)</a></li>
+                                <li>ESP-IDF camera &amp; DMA</li>
+                                <li>CV heuristics / frost detection</li>
+                                <li>Cross-controller messaging</li>
                             </ul>
                         </div>
                     </div>
@@ -129,6 +122,10 @@
                 <div class="content">
                     <div class="content-item">
                         <h3>MIRA 2.0 &mdash; Fault-Tolerant Multimodal Presence Verification <span class="meta">CPRE 5450 | Spring 2026</span></h3>
+                        <div class="card-links">
+                            <a href="https://shi6ask.github.io/MIRA-2.0/" class="project-link" target="_blank" rel="noopener">↗ Project Site</a>
+                            <a href="https://github.com/Shi6aSK/MIRA-2.0" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>
+                        </div>
                         <p class="description">Fault-tolerant activation layer for MIRA &mdash; fuses a 24&nbsp;GHz mmWave radar sentinel with camera verification using confidence score C<sub>i</sub>&nbsp;=&nbsp;w<sub>s</sub>&middot;S&nbsp;+&nbsp;w<sub>f</sub>&middot;F&nbsp;+&nbsp;w<sub>t</sub>&middot;T. Classifies sensor disagreements as transient vs. persistent and transitions a fail-safe FSM, so the system never activates on ambiguity.</p>
                         <p><strong>My Role:</strong> Designed end-to-end &mdash; FreeRTOS task model, TWDT watchdog, UART radar parser with CRC-8, frame quality monitor, and safe-state recovery policy.</p>
                         <div class="detail-group">
@@ -140,18 +137,13 @@
                                 <li>FreeRTOS watchdog integration and fail-safe state machine design</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Seeed MR24HPC1 24&nbsp;GHz mmWave radar datasheet and firmware</li>
-                                <li>Espressif ESP-IDF FreeRTOS and Task Watchdog documentation</li>
-                                <li><a href="https://shi6ask.github.io/MIRA-2.0/" target="_blank" rel="noopener">MIRA 2.0 Project Website</a></li>
-                                <li><a href="https://github.com/Shi6aSK" target="_blank" rel="noopener">GitHub Repository</a></li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="content-item">
                         <h3>MIRA &mdash; Multimodal Assistive Robot <span class="meta">CPRE 5750 | Spring 2025</span></h3>
+                        <div class="card-links">
+                            <a href="https://shi6ask.github.io/MIRA/" class="project-link" target="_blank" rel="noopener">↗ Project Site</a>
+                            <a href="https://github.com/Shi6aSK/MIRA" class="project-link" target="_blank" rel="noopener">↗ GitHub</a>
+                        </div>
                         <img src="MIRA_withmmWaveSensor_at_bottom.jpeg" alt="MIRA robot with OV2640 camera, OLED eyes display, and Seeed XIAO ESP32-S3 Sense" class="project-img-hero" />
                         <p class="description">Privacy-first edge perception robot on the Seeed XIAO ESP32-S3 Sense &mdash; face detection gates the mic, an open-palm gesture triggers voice capture, a point gesture fires a snapshot, both routed to a local Gemma&nbsp;4&nbsp;2B model for assistive responses. All perception stays on-device or on a local laptop companion.</p>
                         <p><strong>My Role:</strong> Built the full stack &mdash; camera DMA pipeline, skin/face detector, block-grid gesture recognition, servo pan-tilt tracking, HTTP API, UART console, and Gemma desktop integration.</p>
@@ -162,16 +154,6 @@
                                 <li>Edge-cloud split design (ESP32-S3 perception + laptop LLM inference)</li>
                                 <li>FreeRTOS concurrency, DMA buffering, and PSRAM management</li>
                                 <li>Privacy-preserving CV with gesture-gated recording</li>
-                            </ul>
-                        </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Espressif ESP-IDF, ESP-DL, and camera driver documentation</li>
-                                <li>Seeed Studio XIAO ESP32-S3 Sense hardware guides</li>
-                                <li>HuggingFace Transformers &amp; Gemma model documentation</li>
-                                <li><a href="https://shi6ask.github.io/MIRA/" target="_blank" rel="noopener">MIRA Project Website</a></li>
-                                <li><a href="https://github.com/Shi6aSK" target="_blank" rel="noopener">GitHub Repository</a></li>
                             </ul>
                         </div>
                     </div>
@@ -187,14 +169,6 @@
                                 <li>Edge ML heuristics for event detection</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Seeed Studio XIAO ESP32-S3 docs</li>
-                                <li>Espressif AI camera examples</li>
-                                <!-- <li><a href="#" aria-disabled="true">Demo repository (publishing soon)</a></li> -->
-                            </ul>
-                        </div>
                     </div>
                     <div class="content-item">
                         <h3>CANary &mdash; Automotive CAN-Bus Telemetry &amp; Edge Alerts <span class="meta">Fall 2025</span></h3>
@@ -206,14 +180,6 @@
                                 <li>Automotive CAN and OBD-II protocol parsing</li>
                                 <li>Embedded concurrency with FreeRTOS tasks</li>
                                 <li>Bluetooth Low Energy data streaming</li>
-                            </ul>
-                        </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>ISO-11898 and SAE J1979 specifications</li>
-                                <li>Espressif BLE examples</li>
-                               <!--  <li><a href="#" aria-disabled="true">System schematics (uploading soon)</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -229,14 +195,6 @@
                                 <li>Human-in-the-loop system design</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Arduino Wi-Fi scanning libraries</li>
-                                <li>Texas Instruments Tiva C development guides</li>
-                              <!--   <li><a href="#" aria-disabled="true">Demo video (coming soon)</a></li> -->
-                            </ul>
-                        </div>
                     </div>
                     <div class="content-item">
                         <h3>Multifunctional Audio Tool using Streamlit <span class="meta">Spring 2024</span></h3>
@@ -250,13 +208,8 @@
                                 <li>Web UI deployment using Streamlit</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Streamlit documentation</li>
-                                <li>Open-source speech-to-text models</li>
-                                <li><a href="https://signalsolve.streamlit.app/" target="_blank" rel="noopener">Live Streamlit app</a></li>
-                            </ul>
+                        <div class="card-links">
+                            <a href="https://signalsolve.streamlit.app/" class="project-link" target="_blank" rel="noopener">↗ Live App</a>
                         </div>
                     </div>
                     <div class="content-item">
@@ -271,13 +224,8 @@
                                 <li>Research communication to technical audiences</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Chaos cryptography survey papers</li>
-                                <li>IBM Qiskit tutorials</li>
-                                <li><a href="https://colab.research.google.com/drive/1dMZigYCZIaoWJKoP1gHW2Wu6iTrrG2lN?usp=sharing#scrollTo=-ZkmeHu2PlaB" target="_blank" rel="noopener">Research notebook</a></li>
-                            </ul>
+                        <div class="card-links">
+                            <a href="https://colab.research.google.com/drive/1dMZigYCZIaoWJKoP1gHW2Wu6iTrrG2lN?usp=sharing#scrollTo=-ZkmeHu2PlaB" class="project-link" target="_blank" rel="noopener">↗ Research Notebook</a>
                         </div>
                     </div>
                     <div class="content-item">
@@ -292,13 +240,8 @@
                                 <li>Web3 ecosystem landscape mapping</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Intel SGX developer tutorials</li>
-                                <li>Hyperledger Fabric whitepapers</li>
-                                <li><a href="https://iastate.box.com/s/respsmffr256si1b1o5on58uaa9jzw05" target="_blank" rel="noopener">Review Paper</a></li>
-                            </ul>
+                        <div class="card-links">
+                            <a href="https://iastate.box.com/s/respsmffr256si1b1o5on58uaa9jzw05" class="project-link" target="_blank" rel="noopener">↗ Review Paper</a>
                         </div>
                     </div>
                     <div class="content-item">
@@ -313,13 +256,8 @@
                                 <li>Research-driven decision frameworks</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>NIST PQC candidate documentation</li>
-                                <li>Open-source crypto libraries</li>
-                                <li><a href="https://iastate.box.com/s/uyhajv4dcifajnzof9qx3vf6m84ccfcf" target="_blank" rel="noopener">Paper draft</a></li>
-                            </ul>
+                        <div class="card-links">
+                            <a href="https://iastate.box.com/s/uyhajv4dcifajnzof9qx3vf6m84ccfcf" class="project-link" target="_blank" rel="noopener">↗ Paper Draft</a>
                         </div>
                     </div>
                 </div>
@@ -328,7 +266,7 @@
 
         <section id="research">
             <div class="container">
-                <h2>Research Highlights</h2>
+                <h2>Research</h2>
                 <div class="content">
                     <div class="content-item">
                         <h3>Quantum Networking Protocols <span class="meta">Undergraduate Researcher &mdash; Fall 2025 &ndash; Present</span></h3>
@@ -340,14 +278,6 @@
                                 <li>Quantum networking theory</li>
                                 <li>Python-based simulation tooling</li>
                                 <li>Collaborative academic writing</li>
-                            </ul>
-                        </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>Qiskit quantum networking modules</li>
-                                <li>Recent IEEE/ACM quantum internet papers</li>
-                                <!-- <li><a href="#" aria-disabled="true">Preprint link (in preparation)</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -363,13 +293,8 @@
                                 <li>Scientific storytelling</li>
                             </ul>
                         </div>
-                        <div class="detail-group">
-                            <h4>Resources Used</h4>
-                            <ul>
-                                <li>EBTY 183L course resources</li>
-                                <li>AlphaFold protein modeling studies</li>
-                                <li><a href="https://iastate.box.com/s/sshvrguky2a5mact0e6igbdg1g95rd8e" target="_blank" rel="noopener">Article</a></li>
-                            </ul>
+                        <div class="card-links">
+                            <a href="https://iastate.box.com/s/sshvrguky2a5mact0e6igbdg1g95rd8e" class="project-link" target="_blank" rel="noopener">↗ Article</a>
                         </div>
                     </div>
                 </div>
@@ -378,13 +303,13 @@
 
         <section id="experience">
             <div class="container">
-                <h2>Internship &amp; Technical Experience</h2>
+                <h2>Experience</h2>
                 <div class="content">
                     <div class="content-item">
                         <h3>Horse's Mouth &mdash; Operations and Technical Content Intern</h3>
                         <p class="description">Operations &amp; technical content intern at Horse&rsquo;s Mouth (now part of Yocket), a startup building resources for registered investment advisors. Partnered directly with the CEO on mentor acquisition, content workflows, and analytics dashboards.</p>
                         <div class="detail-group">
-                            <h4>Duties and Projects</h4>
+                            <h4>Duties</h4>
                             <ul>
                                 <li>Coordinated directly with the CEO on mentor acquisition funnels</li>
                                 <li>Shipped AI-assisted SEO content workflows and analytics dashboards</li>
@@ -392,7 +317,7 @@
                             </ul>
                         </div>
                         <div class="detail-group">
-                            <h4>Skills Learned &mdash; Technical and Soft</h4>
+                            <h4>Skills</h4>
                             <ul>
                                 <li>Content automation with Python and no-code tools</li>
                                 <li>Stakeholder communication and expectation management</li>
@@ -409,7 +334,7 @@
             <div class="container">
                 <h2>Resume</h2>
                 <div class="text-block">
-                    <p>Browse or download my latest resume to explore academic highlights, research experience, leadership roles, and community impact. I update this document ahead of each recruiting cycle.</p>
+                    <p>Latest resume &mdash; research, awards, and leadership. Updated each recruiting cycle.</p>
                     <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
                     <ul class="resume-highlights">
                         <li>Research &amp; Publications: Quantum encryption, trusted execution, biomimetic robotics</li>

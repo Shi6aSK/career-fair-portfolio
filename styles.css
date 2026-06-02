@@ -143,7 +143,7 @@ main {
 }
 
 section {
-    padding: 80px 0;
+    padding: 50px 0;
     position: relative;
     overflow: hidden;
 }
@@ -159,31 +159,46 @@ section::before {
 h2 {
     text-align: center;
     font-size: clamp(2em, 5vw, 4em);
-    margin-bottom: 20px;
+    margin-bottom: 0;
     color: var(--accent-orange);
     letter-spacing: 1px;
     font-family: 'Byte Bounce', 'Space Mono', 'Poppins', sans-serif;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 3px;
+    background: var(--accent-orange);
+    margin: 7px auto 18px;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+.hero h2::after {
+    display: none;
 }
 
 .content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 12px;
 }
 
 .content-item {
     background: #141414;
-    margin: 15px 0;
-    padding: 28px;
-    border-radius: 16px;
+    margin: 6px 0;
+    padding: 18px 20px;
+    border-radius: 10px;
     flex: 1 1 300px;
     max-width: 520px;
     width: 100%;
     text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
     border: 1px solid #2a2a2a;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
 }
 
 .content-item:hover {
@@ -193,15 +208,26 @@ h2 {
 }
 
 .content-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 12px;
+    font-size: 1.05em;
+    margin-bottom: 5px;
     color: var(--accent-orange);
     font-family: 'Poppins', sans-serif;
+    line-height: 1.35;
+}
+
+.content-item h3 .meta {
+    font-size: 0.72em;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0;
+    vertical-align: middle;
+    margin-left: 6px;
+    color: var(--text-color-muted);
 }
 
 .content-item p {
-    font-size: 1em;
-    margin-bottom: 16px;
+    font-size: 0.88em;
+    margin-bottom: 8px;
     color: var(--text-color-muted);
 }
 
@@ -249,7 +275,7 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
 }
 
 .hero-copy {
@@ -280,20 +306,21 @@ footer p {
 }
 
 .tagline {
-    font-size: 1.2em;
+    font-size: 1.05em;
     color: var(--accent-blue);
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 .intro {
     color: var(--text-color-muted);
-    margin-bottom: 32px;
+    font-size: 0.92em;
+    margin-bottom: 16px;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
 }
 
 .contact-grid .label {
@@ -327,13 +354,13 @@ footer p {
 
 .text-block p {
     color: var(--text-color-muted);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .text-block h3,
 .text-block h4 {
     color: var(--accent-orange);
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
 .text-block ul {
@@ -343,22 +370,68 @@ footer p {
 
 .meta {
     color: var(--accent-blue);
-    font-size: 0.9em;
-    margin-bottom: 18px;
+    font-size: 0.82em;
+    margin-bottom: 8px;
 }
 
 .description {
     color: var(--text-color-muted);
 }
 
-.detail-group h4 {
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 9px;
+    background: rgba(232, 93, 4, 0.1);
+    border: 1px solid rgba(232, 93, 4, 0.28);
+    border-radius: 4px;
     color: var(--accent-orange);
-    margin-bottom: 8px;
+    font-size: 0.73em;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.18s, border-color 0.18s;
+}
+
+.project-link:hover {
+    background: rgba(232, 93, 4, 0.2);
+    border-color: rgba(232, 93, 4, 0.5);
+}
+
+.detail-group h4 {
+    font-size: 0.65em;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--text-color-muted);
+    margin-bottom: 6px;
+    font-weight: 700;
+    opacity: 0.75;
 }
 
 .detail-group ul {
-    margin-left: 20px;
-    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.detail-group ul li {
+    background: #1c1c1c;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.76em;
     color: var(--text-color-muted);
 }
 
