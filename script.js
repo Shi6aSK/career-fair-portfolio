@@ -1,17 +1,17 @@
-const SHAPE_COUNT = 160;
-const LABEL_COUNT = 55;
+const SHAPE_COUNT = 75;
+const LABEL_COUNT = 28;
 const CURSOR_RADIUS = 150;
 const LABEL_BOUND_RADIUS_FACTOR = 0.45;
 const LABEL_RADIUS_MULTIPLIER = 0.65;
 const LABEL_FONT = 'Turret Road';
 
 const shapePalette = [
-    [100, 149, 237, 230],
-    [123, 104, 238, 235],
-    [138, 43, 226, 235],
-    [72, 61, 139, 225],
-    [147, 112, 219, 230],
-    [65, 105, 225, 225]
+    [116, 192, 252, 190],
+    [177, 151, 252, 195],
+    [255, 159, 67, 175],
+    [100, 210, 255, 185],
+    [200, 162, 255, 180],
+    [255, 200, 100, 170]
 ];
 
 const labelSymbols = [
@@ -29,7 +29,7 @@ function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('p5-container');
     pixelDensity(1);
-    frameRate(48);
+    frameRate(36);
     textFont(LABEL_FONT);
     textStyle(BOLD);
 
