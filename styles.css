@@ -165,7 +165,7 @@ section::before {
 
 h2 {
     text-align: center;
-    font-size: clamp(2em, 5vw, 4em);
+    font-size: clamp(5em, 5vw, 4em);
     margin-bottom: 0;
     color: var(--lavender);
     letter-spacing: 1px;
